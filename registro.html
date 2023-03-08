@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./imagenes/Logo/ICONO.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/registro.css">
+    <title>YOPI - Vendé con Yopi</title>
+</head>
+<body onload="configurarFechayHora()">
+    <div class="container-header">
+        <div class="logo">
+            <a href="http://127.0.0.1:5500/index.html"><img src="./imagenes/Logo/Logotipo yopi.png" alt="Logotipo YOPI"></a>
+        </div>
+    </div>
+   
+    <form class="form" action="./back/registro.php" method="post">
+        <div class="form-container">
+                <h2>Agendá tu reunión</h2>
+                <input required type="text"class="nombre" placeholder="Nombre o Empresa" name="nombre"id="name">
+                <input required type="email" class="correo" name="email" id="email" placeholder="Correo">
+                
+            <div class="fecha-hora-container">
+                <label for="fecha">Fecha</label>
+                <input type="date" class="fecha" id="fecha" name="fecha">
+                <label for="hora">Hora</label>
+                <select class="hora"id="hora" name="hora"></select>
+            </div>
+
+                
+                <textarea name="message" id="message" class="mensaje"
+                placeholder="Mensaje"></textarea>
+
+                <input type="submit" value="Agendar reunión" class="btn-agendar">
+        
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
